@@ -1,0 +1,28 @@
+.navbar-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-image: url('Images/Logo.png'); 
+    background-size: cover;
+    background-position: center;
+    margin-right: 0.75rem; 
+    display: inline-block; 
+}
+
+.footer-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-image: url('/Images/Logo.png');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  width: 100%; 
+}
+
+.footer-top {
+  background-color: #f3e5f5; 
+}

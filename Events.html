@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teachers – Upcoming Events</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+     :root {
+      --purple: #8e61ff;
+      --purple-dark: #5a32b5;
+      --pink: #f8b3ff;
+      --bg-light: #fff5ff;
+      --text-dark: #2b113b;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+
+    
+    .navbar-custom {
+      background: #ffffffdd;
+      backdrop-filter: blur(8px);
+    }
+
+
+    .nav-link {
+      color: var(--text-dark) !important;
+      font-weight: 500;
+    }
+
+    .btn-login {
+      background-color: var(--purple);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 999px;
+      padding-inline: 24px;
+    }
+
+  
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url("/Images/Events-Hero.webp") center/cover no-repeat;
+      z-index: -2;
+    }
+
+  
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .btn-tickets {
+      background-color: var(--purple);
+      border: none;
+      padding-inline: 40px;
+      padding-block: 12px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+   
+    .section-spaces {
+      padding: 4rem 0;
+    }
+
+    .space-card {
+      background-color: #f4dcff;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(50, 10, 90, 0.15);
+      border: none;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .space-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .space-card-body {
+      padding: 1.5rem 1.75rem 2rem;
+    }
+
+    .space-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .space-header {
+      background: linear-gradient(135deg, #f694ff, #8e61ff);
+      padding: 0.75rem 1.75rem;
+    }
+
+    .btn-learn {
+      background-color: var(--purple-dark);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 999px;
+      padding-inline: 24px;
+      border: none;
+    }
+
+
+
+
+    .seasonal-card {
+      background-color: rgba(123, 31, 162, 0.12);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .seasonal-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .seasonal-card .card-body {
+      padding: 1.5rem;
+      color: #fff;
+      background: linear-gradient(180deg, #7b1fa2, #ec407a);
+    }
+
+    .seasonal-card h5 {
+      font-weight: 700;
+    }
+
+    .seasonal-card p {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .seasonal-card .btn {
+      margin-top: 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #7b1fa2;
+      border: none;
+    }
+
+
+    .footer-top {
+      background-color: #f4dcff;
+      padding: 5rem 0;
+    }
+
+    .footer-bottom {
+      padding: 1.5rem 0 3rem;
+    }
+
+
+    .footer-heading {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .footer-link {
+      display: block;
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--purple);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+
+<body>
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid px-3"> <!-- fluid, small side padding -->
+      <a class="navbar-brand d-flex align-items-center" href="">
+        <img src="/Images/Logo.png" alt="Espace pour la vie Montréal" style="height: 40px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Homepage.html">Home</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Kids &amp; Teachers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Planetarium.html">Explore Our Spaces</a>
+          </li>
+        </ul>
+
+        <button class="btn btn-login me-2">Log in</button>
+        <a href="#" class="nav-link fw-semibold">EN/FR</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-md-6">
+          <h1 class="hero-title mb-4">Teachers</h1>
+          <p>
+            Check out our selection of upcoming events! Read about them, see when
+            they are taking place, and see where they are taking place.
+          </p>
+          <button class="btn btn-tickets">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="planetarium-section py-5">
+    <div class="container text-center">
+      <h2 class="planetarium-title mb-4">Planetarium</h2>
+
+
+      <ul class="nav nav-tabs justify-content-center mb-4 planet-tabs">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#about">
+            Calander
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#map">
+            About
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#show">
+            Map
+          </button>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#show">
+            Show
+          </button>          
+        </li>
+      </ul>
+
+  
+      <div class="tab-content text-start mx-auto planetarium-text-wrapper">
+        <div class="tab-pane fade show active" id="Calander">
+          <p>
+          Come explore a variety of beautiful songs and melodies provided by songwriters on a stage nestled in the heart of the Botanical Garden. In an amalgam of musical styles and sound colours, each artist will bring their personal and intimate touch.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="">
+          <p>
+            The Planetarium is located within the Espace pour la vie complex, connected to the Biodôme and botanical garden.
+          </p>
+          <p>
+            Metro and bus lines stop nearby, and parking is available on site.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="show">
+          <p>
+            Daily immersive shows explore the night sky, exoplanets, and space exploration.
+          </p>
+          <p>
+            Check the schedule for family-friendly sessions, late-night events, and special presentations.
+          </p>
+        </div>
+                <div class="tab-pane fade" id="show">
+          <p>
+            Daily immersive shows explore the night sky, exoplanets, and space exploration.
+          </p>
+          <p>
+            Check the schedule for family-friendly sessions, late-night events, and special presentations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <section class="pb-5 section-spaces">
+  <div class="d-flex justify-content-center gap-4">
+
+    <div class="card" style="width: 30%;">
+      <img src="/Images/Arts-At-Garden.webp" class="w-100" alt="Planetarium" />
+      <div class="space-header">
+        <h3 class="space-title mb-0">Arts at the Garden</h3>
+      </div>
+      <div class="space-card-body">
+        <p class="mb-3">
+          The Planetarium’s mission is to bring people closer to nature
+          and the cosmos through immersive astronomical experiences.
+        </p>
+        <button class="btn btn-learn">Learn More</button>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30%;">
+      <img src="/Images/The-Gardens of-Light.webp" class="w-100" alt="Biosphere" />
+      <div class="space-header">
+        <h3 class="space-title mb-0">The Garden of Light</h3>
+      </div>
+      <div class="space-card-body">
+        <p class="mb-3">
+          The Biosphere highlights environmental issues and sustainable
+          futures through exhibitions overlooking the city and river.
+        </p>
+        <button class="btn btn-learn">Learn More</button>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30%;">
+      <img src="/Images/Halloween-At-Gardens.webp" class="w-100" alt="Botanic Gardens" />
+      <div class="space-header">
+        <h3 class="space-title mb-0">Halloween At the Garden</h3>
+      </div>
+      <div class="space-card-body">
+        <p class="mb-3">
+          The Botanic Gardens offer themed gardens and greenhouses filled
+          with plants from around the world all year long.
+        </p>
+        <button class="btn btn-learn">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer class="mt-5">
+    <div class="footer-top py-4">
+      <div class="container-fluid px-3">
+        <div class="row align-items-center g-3">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center">
+              <div class="footer-logo me-3"></div>
+              <p class="mb-0">
+                Enjoy an immersive experience at the 5 Espace pour la vie
+                museums: the Biodome, Biosphere, Insectarium, Botanic Garden,
+                and Planetarium.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-md-end">
+            <div class="me-5">
+              <div class="footer-heading">Contact Us</div>
+              <div>(514) 868-3000</div>
+              <a class="footer-link" href="mailto:espacemont@gmail.com">
+                espacemont@gmail.com
+              </a>
+            </div>
+            <div>
+              <div class="footer-heading">Social Media</div>
+              <div class="mb-1">
+                <span class="social-icon">f</span>Facebook
+              </div>
+              <div>
+                <span class="social-icon">IG</span>Instagram
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

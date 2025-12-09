@@ -1,0 +1,34 @@
+$body-bg: #f80;
+
+
+
+$primary: #987dd3;
+$secondary: #7d82b8;
+$success: #b7e3cc;
+$info: #c4ffb2;
+$warning: #d6f7a3;
+$danger: #dd7596;
+$light: #f2f2f2;
+$dark: #404e5c;
+
+
+// Changing navbar
+$navbar-light-color: red;
+$navbar-light-hover-color: blue;
+$navbar-light-active-color: yellow;
+
+
+// Typography
+$font-family-sans-serif: "Tilt Neon", sans-serif;
+$headings-font-family: "Agbalumo", serif;
+
+
+$h1-font-size: 1rem * 8;
+$h2-font-size: 1rem * 2;
+$h3-font-size: 1rem * 1.75;
+
+
+$line-height-base: 1.6;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
